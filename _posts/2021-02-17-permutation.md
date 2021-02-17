@@ -24,24 +24,22 @@ using namespace std;
 void Permutation(vector<int>& Array, int Start, int End)
 {
     // 시작과 끝이 같으면 모든 인덱스 순환했다는 뜻
-    if (Start == End)
-    {
-        for (const auto it : Array)
-        {
+    if (Start == End) {
+        for (const auto it : Array) {
             cout << it << " ";
         }
         cout << endl;
     }
     // 인덱스가 서로 다르면
-    else
-    {
+    else {
         // 모든 인덱스에 대해 
-        for (int i = Start; i <= End; ++i)
-        {
+        for (int i = Start; i <= End; ++i) {
             // 시작과 해당 자리 인덱스 바꾸고
             swap(Array[Start], Array[i]);
+            
             // 시작을 +1만큼 이동시켜 재귀적으로 호출
             Permutation(Array, Start + 1, End);
+            
             // 원래 상태로 되돌림
             // 그래야 다음 인덱스 차례에서 쓸 수 있음
             swap(Array[Start], Array[i]);
@@ -49,6 +47,7 @@ void Permutation(vector<int>& Array, int Start, int End)
     }
 }
 ```
+
 내가 이해한 바로는,
 인덱스를 돌면서 그 인덱스에 해당하는 값을 앞쪽에 고정해놓고
 나머지를 자리 바꾸는 식으로 경우의 수를 따지는 방식이다.
