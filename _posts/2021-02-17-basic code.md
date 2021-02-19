@@ -17,16 +17,18 @@ use_math: true
 - String의 첫 문자: ``s.front();``
 - String의 끝 문자: ``s.back();``
 - String 찾기: ``s.find("aroma");``라고 하면 aroma라는 단어가 나오기 시작하는 곳의 index를 반환
-- String 맨 뒤에 문자 추가하기: ``voide push_back(char a);``
+- String 맨 뒤에 문자 추가하기: ``void push_back(char a);``
 - String 맨 뒤에 문자 삭제하기: ``s.pop_back();``
 - String에서 부분 string 만들기: 
+
     ```
     // i번째부터 끝까지
     s1 = s.substr(i);  
     
-    // i번째부터 끝까지(s.length() - 1 값은 남은 길이이기 때문에)
+    // i번째부터 끝까지 (s.length() - i 값은 남은 길이이기 때문에)
     s2 = s.substr(i, s.length() - i);  
     ```
+- string 뒤집기: ``reverse(s.begin(), s.end());``
 
 ## 컨테이너 순환문
 Hash 같은 거는 숫자로 iterator를 사용할 수 없기 때문에 해당하는 iterator가 필요하다.
@@ -41,3 +43,31 @@ for(auto& i : hash) {
     cout << *i << endl;
 }
 ```
+
+## Sort 사용법
+- 헤더 추가: ``#include <algorithm>``
+- 오름차순 정렬
+```
+// 시작, 끝, greater<타입>
+sort(s.begin(), s.end(), greater<vector<string>>());
+```
+- 내림차순 정렬
+```
+// 시작, 끝, less<타입>
+sort(v.begin(), v.end(), less<int>());
+```
+
+## Hash 사용법
+- 할당
+    ```
+    // hash[key값].push_back(value값);
+    hash["aroma"].push_back(100);
+    hash[tickets[i][0]].push_back(tickets[i][1]);
+    ```
+
+## 배열/vector
+- 선언 및 할당
+    ```
+    vector<vector<string>> tickets = { { "ICN", "JFK" }, { "ICN", "IAD" }, {"JFK", "HND"} };
+    vector<string> s = {"ICN"};
+    ```

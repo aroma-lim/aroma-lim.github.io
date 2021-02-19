@@ -73,3 +73,12 @@ use_math: true
 	//    보통 a>b를 bool로 출력하여 내림차순하도록 구현
 	sort(begin, end, comp);
 	```
+    - 세 번째 파라미터인 comp 자리에는 커스터마이징 코드를 만들어 넣을 수 있다.
+    ```
+    // return값이 true일 때 a와 b의 순서대로 정렬된다.
+    bool comp(int a, int b) {
+        string st1 = to_string(a) + to_string(b);
+        string st2 = to_string(b) + to_string(a);
+        return st1 > st2;
+    }
+    ```
