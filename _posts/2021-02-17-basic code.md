@@ -96,11 +96,11 @@ sort(v.begin(), v.end(), less<int>());
     ```
     
 ## 진법 다루기 - 2진수 등
-    ```
-    // 10진수 -> 2진수로 변환 후 string에 넣기
-    while (num1 > 0)
-    {
-        s += to_string(num1 % 2);
-        num1 /= 2;
-    }
-    ```
+```
+// 10진수 -> 2진수로 변환 후 string에 넣기
+while (num1 > 0)
+{
+    s += to_string(num1 % 2);
+    num1 /= 2;
+}
+```
