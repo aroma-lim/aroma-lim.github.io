@@ -71,3 +71,36 @@ sort(v.begin(), v.end(), less<int>());
     vector<vector<string>> tickets = { { "ICN", "JFK" }, { "ICN", "IAD" }, {"JFK", "HND"} };
     vector<string> s = {"ICN"};
     ```
+    
+## 알파벳 다루기 (Ascii)
+- A~Z(a~z)까지 26개
+    ```
+    // 소문자 + n의 index
+    char idx = (s[i] - 'a' + n) % 26;
+    char s1 = 'a' + idx;
+    
+    // 대문자 + n의 index
+    char idx = (s[i] - 'A' + n) % 26;
+    char s2 = 'A' + idx;
+    ```
+- 아스키 코드로 대문자가 먼저, 소문자가 나중. 그 사이에 다른 값들 있음 주의!
+- A~Z는 65번~90번
+- a~z는 97번~122번
+- 소문자/대문자 범위
+    ```
+    // 소문자일 때
+    if (s[i] >= 'a' && s[i] <= 'z')
+    
+    // 대문자일 때
+    if (s[i] >= 'A' && s[i] <= 'Z')
+    ```
+    
+## 진법 다루기 - 2진수 등
+    ```
+    // 10진수 -> 2진수로 변환 후 string에 넣기
+    while (num1 > 0)
+    {
+        s += to_string(num1 % 2);
+        num1 /= 2;
+    }
+    ```
