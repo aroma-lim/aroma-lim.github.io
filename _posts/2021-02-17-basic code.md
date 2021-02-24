@@ -44,6 +44,14 @@ for(auto& i : hash) {
 }
 ```
 
+## Hash 사용법
+- 할당
+    ```
+    // hash[key값].push_back(value값);
+    hash["aroma"].push_back(100);
+    hash[tickets[i][0]].push_back(tickets[i][1]);
+    ```
+    
 ## Sort 사용법
 - 헤더 추가: ``#include <algorithm>``
 - 오름차순 정렬
@@ -56,14 +64,6 @@ sort(s.begin(), s.end(), greater<vector<string>>());
 // 시작, 끝, less<타입>
 sort(v.begin(), v.end(), less<int>());
 ```
-
-## Hash 사용법
-- 할당
-    ```
-    // hash[key값].push_back(value값);
-    hash["aroma"].push_back(100);
-    hash[tickets[i][0]].push_back(tickets[i][1]);
-    ```
 
 ## 배열/vector
 - 선언 및 할당
