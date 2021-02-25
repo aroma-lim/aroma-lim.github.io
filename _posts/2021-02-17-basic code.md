@@ -104,3 +104,29 @@ while (num1 > 0)
     num1 /= 2;
 }
 ```
+
+## 배열 동적 할당 (Dynamic Allocation)
+```
+// 배열 선언
+int *arr = new int[n];
+
+
+// 2중 배열 (2d array)
+int **d = new int*[N];
+
+for (int i = 0; i < N; i++)
+    d[i] = new int[N];
+    
+// 할당 해제
+delete[] a;
+delete[] d;
+```
+
+## 초기화 시 최소값 최대값
+```
+// 헤더 필요
+#include <limits.h>
+
+// 가장 큰 수를 미리 넣어두어 min을 초기화 하고 싶을 때
+int min = INT_MAX;
+```
