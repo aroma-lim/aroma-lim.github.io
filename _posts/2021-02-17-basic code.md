@@ -130,3 +130,13 @@ delete[] d;
 // 가장 큰 수를 미리 넣어두어 min을 초기화 하고 싶을 때
 int min = INT_MAX;
 ```
+
+## 배열 및 벡터에서 중복값 제거
+- unique를 사용해서 중복값을 뒤로 보내고, 다 보낸 뒤 iterator가 바로 그 다음을 가리키고 있어서 거기서 부터 지우면 된다.
+```
+// 헤더 필요
+#include <algorithm>
+
+// unique 후 erase
+erase(unique(v.begin(), v.end()), v.end());
+```
