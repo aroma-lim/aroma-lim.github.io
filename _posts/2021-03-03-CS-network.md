@@ -37,7 +37,7 @@ use_math: true
         <----Fin-----
         -----ACK---->
     ```
-- why 3-way? 양방향성. 패킷을 주고/받고 둘 다 되는지 확인하기 위해
+- why 3-way?: 양방향성. 패킷을 주고/받고 둘 다 되는지 확인하기 위해
 - 처음 SYN 보낼 때 난수를 보내는 이유: 이전의 connection으로 오는 '패킷'인지, 'SYN'인지 구분하기 위해
 
 ## UDP - User Datagram Protocol
