@@ -1,7 +1,8 @@
 ---
 title:	"Algorithm - Sort"
 
-tags: Algorithm
+tags: [C++, sort]
+categories: 알고리즘
 use_math: true
 
 ---

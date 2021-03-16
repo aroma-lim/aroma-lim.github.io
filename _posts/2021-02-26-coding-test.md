@@ -2,6 +2,7 @@
 title:	"코딩 테스트에서 주의할 점"
 
 tags: C++
+categories: 알고리즘
 use_math: true
 
 ---

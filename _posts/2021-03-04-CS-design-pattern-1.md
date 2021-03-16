@@ -1,7 +1,8 @@
 ---
 title:	"CS 기술면접 준비 - 디자인패턴1"
 
-tags: CS
+tags: [CS, 디자인패턴]
+categories: 기술면접
 use_math: true
 
 ---

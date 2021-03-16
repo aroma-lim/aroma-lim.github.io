@@ -1,7 +1,8 @@
 ---
 title:	"Greedy and Implementation"
 
-tags: Algorithm
+tags: [C++, Greedy]
+categories: 알고리즘
 use_math: true
 
 ---
