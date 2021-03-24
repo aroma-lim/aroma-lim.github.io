@@ -53,6 +53,13 @@ for(auto& i : hash) {
     hash[tickets[i][0]].push_back(tickets[i][1]);
     ```
     
+## Set 사용법 (set, unordered_set)
+- 할당
+    ```
+    // set.insert(값);
+    set.insert(s1[i]);
+    ```
+    
 ## Sort 사용법
 - 헤더 추가: ``#include <algorithm>``
 - 오름차순 정렬
