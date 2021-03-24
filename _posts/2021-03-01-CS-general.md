@@ -2,7 +2,7 @@
 title:	"CS 기술면접 준비 - 개발 상식"
 
 tags: CS
-categories: 기술면접
+categories: tech-interview
 use_math: true
 
 ---

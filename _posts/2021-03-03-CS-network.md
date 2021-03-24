@@ -2,7 +2,7 @@
 title:	"CS 기술면접 준비 - 네트워크"
 
 tags: [CS, network]
-categories: 기술면접
+categories: tech-interview
 use_math: true
 
 ---

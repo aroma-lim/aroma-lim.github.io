@@ -2,7 +2,7 @@
 title:	"Binary Search"
 
 tags: [C++]
-categories: 알고리즘
+categories: algorithm
 use_math: true
 
 ---

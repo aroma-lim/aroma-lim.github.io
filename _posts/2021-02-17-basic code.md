@@ -2,7 +2,7 @@
 title:	"Basic Code (C++)"
 
 tags: C++
-categories: 알고리즘
+categories: algorithm
 use_math: true
 
 ---
@@ -28,8 +28,12 @@ use_math: true
     
     // i번째부터 끝까지 (s.length() - i 값은 남은 길이이기 때문에)
     s2 = s.substr(i, s.length() - i);  
+    
+    // i번째부터 n개까지만
+    s3 = s.substr(i, n);
     ```
 - string 뒤집기: ``reverse(s.begin(), s.end());``
+- string 정렬하기: ``sort(s.begin(), s.end());``
 
 ## 컨테이너 순환문
 Hash 같은 거는 숫자로 iterator를 사용할 수 없기 때문에 해당하는 iterator가 필요하다.
@@ -72,6 +76,7 @@ sort(s.begin(), s.end(), greater<vector<string>>());
 // 시작, 끝, less<타입>
 sort(v.begin(), v.end(), less<int>());
 ```
+- 참고: string을 sort하면 그 안에 char들을 sort한다.
 
 ## 배열/vector
 - 선언 및 할당
@@ -148,3 +153,7 @@ int min = INT_MAX;
     // unique 후 erase
     v.erase(unique(v.begin(), v.end()), v.end());
     ```
+    
+## 조합 공식 (combination)
+- 공식: $nCr = nPr / r!$
+- 예시: $5C3 = 5P3 / 3! = (5 * 4 * 3) / (3 * 2 * 1)$

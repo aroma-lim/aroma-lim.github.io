@@ -2,7 +2,7 @@
 title:	"Algorithm - Sort"
 
 tags: [C++, sort]
-categories: 알고리즘
+categories: algorithm
 use_math: true
 
 ---

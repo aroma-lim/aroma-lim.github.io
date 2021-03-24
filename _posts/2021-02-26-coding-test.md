@@ -2,7 +2,7 @@
 title:	"코딩 테스트에서 주의할 점"
 
 tags: C++
-categories: 알고리즘
+categories: algorithm
 use_math: true
 
 ---
@@ -33,6 +33,9 @@ use_math: true
 ## 가장 큰 수(maximum), 가장 작은 수(minimum) 구할 때 주의할 점
 - 예를 들어, max 구할 때 음수가 섞여있는데 0으로 초기화하면 안됨
 - 초기화 할 때 ``INT_MIN``이나 ``INT_MAX`` 사용할 것
+
+## 혹시 너무 복잡도가 크거나 순서 상관 없이 경우의 수 구해야 할 때
+- 정렬을 먼저 해보는 걸 고려해보기
 
 
 ## 그 외
