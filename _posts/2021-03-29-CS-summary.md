@@ -44,12 +44,13 @@ delete[] array;
 - 소멸
     - 파생 클래스 소멸자 호출 -> 기초 클래스 소멸자 호출
     
-## Exception processing
+## 5. Exception processing
 - ``throw std::out_of_range("범위초과");`` 이런 식으로 std안에 여러 종류의 예외를 가지고 있음.
 - try 문
     - 예외 발생 가능성이 있는 블록
     - 발생 시 가장 가까운 catch문으로 점프
 - ``catch(std::out_of_range& e)``: 발생할 예외에 대해 처리할 내용
+
 ```
 try {
     blarblar
