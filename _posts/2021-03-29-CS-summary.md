@@ -59,7 +59,7 @@ try {
 }
 // blarblar 부분이 throw부분. try에서 발생한 오류에 대한 정보 전달
 ```
-
+- 참고: [TCP School](http://www.tcpschool.com/cpp/cpp_exception_intro)
 ## 6. C++ Const & Volatile Qualifiers
 - Const: 이미 assign된 값을 변경할 수 없다.
 - Volatile: 언제 바뀔지 모르는 값이라 최적화하지 말라는 키워드

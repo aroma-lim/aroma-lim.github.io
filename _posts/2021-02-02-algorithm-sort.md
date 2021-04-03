@@ -83,3 +83,37 @@ use_math: true
         return st1 > st2;
     }
     ```
+    
+## 여러 기준으로 sort할 때
+- 본 예시는 Sort first descending by score, then ascending by name을 조건으로 한다.
+- 큰 조건, 즉 first 조건으로 먼저 큰 조건으로 하고, 다음 조건은 그 안에서 다루면 된다.  
+
+    ```
+    class Checker {
+    public:
+        // complete this method
+        static int comparator(Player a, Player b) {
+            if (a.score > b.score)
+                return 1;
+            else if (a.score == b.score) {
+                if (a.name <= b.name)
+                    return 1;
+                else
+                    return -1;
+            }
+            else {
+                return -1;
+            }
+
+        }
+    };
+
+    bool compare(Player a, Player b) {
+        if (Checker::comparator(a, b) == -1)
+            return false;
+        return true;
+    }
+
+
+    sort(players.begin(), players.end(), compare);
+    ```
