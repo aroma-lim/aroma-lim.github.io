@@ -83,6 +83,19 @@ use_math: true
         return st1 > st2;
     }
     ```
+    - 주의: Strick Weak Ordering을 따라야한다.
+    ```
+    bool compare(string a, string b) {
+        string ab, ba;
+        ab = a + b;
+        ba = b + a;
+        
+        // 두 값이 같을 때에는 <, > 비교에 둘 다 false가 나와야 하는데
+        // 그럴 수 있도록 구현해야한다. 아래와 같이 해주면 된다.
+        // true, false를 직접 return하지 말고 비교해서 return하도록..
+        return ab > ba;
+    }
+    ```
     
 ## 여러 기준으로 sort할 때
 - 본 예시는 Sort first descending by score, then ascending by name을 조건으로 한다.
