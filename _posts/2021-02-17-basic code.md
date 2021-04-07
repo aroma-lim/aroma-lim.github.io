@@ -1,7 +1,7 @@
 ---
 title:	"Basic Code (C++)"
 
-tags: C++
+tags: [C++, string, iterator, hash, set, sort, vector, ascii, binary, limits, unique, erase, combination, permutation, prime]
 categories: algorithm
 use_math: true
 
@@ -157,3 +157,30 @@ int min = INT_MAX;
 ## 조합 공식 (combination)
 - 공식: $nCr = nPr / r!$
 - 예시: $5C3 = 5P3 / 3! = (5 * 4 * 3) / (3 * 2 * 1)$
+
+## 소수 구하기
+1) 간단하게 구하는 방법
+```
+bool isPrime(int n) {
+    if (n == 0 || n == 1) return false;
+
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+```
+2) [아리토스텔레스의 체](https://ko.wikipedia.org/wiki/%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98_%EC%B2%B4)로 구하는 방법
+
+## 순열 구하는 함수
+- **next_permutation**함수: ``<algorithm>`` 헤더에 포함되어 있다.
+
+```
+// 반드시 오름차순으로 정렬 후 시행해야 한다.
+sort(numbers.begin(), numbers.end());
+
+do {
+        // do sth...
+
+    } while (next_permutation(numbers.begin(), numbers.end()));
+```
