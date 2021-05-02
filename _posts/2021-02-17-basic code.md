@@ -20,15 +20,15 @@ use_math: true
 - String 찾기: ``s.find("aroma");``라고 하면 aroma라는 단어가 나오기 시작하는 곳의 index를 반환
 - String 맨 뒤에 문자 추가하기: ``void push_back(char a);``
 - String 맨 뒤에 문자 삭제하기: ``s.pop_back();``
-- String에서 부분 string 만들기: 
+- String에서 부분 string 만들기:
 
     ```
     // i번째부터 끝까지
     s1 = s.substr(i);  
-    
+
     // i번째부터 끝까지 (s.length() - i 값은 남은 길이이기 때문에)
     s2 = s.substr(i, s.length() - i);  
-    
+
     // i번째부터 n개까지만
     s3 = s.substr(i, n);
     ```
@@ -43,7 +43,7 @@ Hash 같은 거는 숫자로 iterator를 사용할 수 없기 때문에 해당�
 for(auto& i : hash) {
     // i에 해당하는 key는 first, value는 second이다.
     cout << i.first << " " << i.second << endl;
-    
+
     // i에 해당하는 원소 출력
     cout << *i << endl;
 }
@@ -56,22 +56,22 @@ for(auto& i : hash) {
     hash["aroma"].push_back(100);
     hash[tickets[i][0]].push_back(tickets[i][1]);
     ```
-    
+
 ## Set 사용법 (set, unordered_set)
 - 할당
     ```
     // set.insert(값);
     set.insert(s1[i]);
     ```
-    
+
 ## Sort 사용법
 - 헤더 추가: ``#include <algorithm>``
-- 오름차순 정렬
+- 내림차순 정렬 (앞 값 > 뒤 값)
 ```
 // 시작, 끝, greater<타입>
 sort(s.begin(), s.end(), greater<vector<string>>());
 ```
-- 내림차순 정렬
+- 오름차순 정렬 (앞 값 < 뒤 값; default)
 ```
 // 시작, 끝, less<타입>
 sort(v.begin(), v.end(), less<int>());
@@ -84,14 +84,14 @@ sort(v.begin(), v.end(), less<int>());
     vector<vector<string>> tickets = { { "ICN", "JFK" }, { "ICN", "IAD" }, {"JFK", "HND"} };
     vector<string> s = {"ICN"};
     ```
-    
+
 ## 알파벳 다루기 (Ascii)
 - A~Z(a~z)까지 26개
     ```
     // 소문자 + n의 index
     char idx = (s[i] - 'a' + n) % 26;
     char s1 = 'a' + idx;
-    
+
     // 대문자 + n의 index
     char idx = (s[i] - 'A' + n) % 26;
     char s2 = 'A' + idx;
@@ -103,11 +103,11 @@ sort(v.begin(), v.end(), less<int>());
     ```
     // 소문자일 때
     if (s[i] >= 'a' && s[i] <= 'z')
-    
+
     // 대문자일 때
     if (s[i] >= 'A' && s[i] <= 'Z')
     ```
-    
+
 ## 진법 다루기 - 2진수 등
 ```
 // 10진수 -> 2진수로 변환 후 string에 넣기
@@ -129,7 +129,7 @@ int **d = new int*[N];
 
 for (int i = 0; i < N; i++)
     d[i] = new int[N];
-    
+
 // 할당 해제
 delete[] a;
 delete[] d;
@@ -153,7 +153,7 @@ int min = INT_MAX;
     // unique 후 erase
     v.erase(unique(v.begin(), v.end()), v.end());
     ```
-    
+
 ## 조합 공식 (combination)
 - 공식: $nCr = nPr / r!$
 - 예시: $5C3 = 5P3 / 3! = (5 * 4 * 3) / (3 * 2 * 1)$
