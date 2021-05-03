@@ -77,6 +77,7 @@ sort(s.begin(), s.end(), greater<vector<string>>());
 sort(v.begin(), v.end(), less<int>());
 ```
 - 참고: string을 sort하면 그 안에 char들을 sort한다.
+- 참고2: priority_queue는 greater와 less의 의미가 다르다. 반대로 쓰임. [Heap 참고](https://aroma-lim.github.io//algorithm/heap/)
 
 ## 배열/vector
 - 선언 및 할당
