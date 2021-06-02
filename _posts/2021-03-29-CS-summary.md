@@ -37,13 +37,13 @@ delete[] array;
 - static 멤버 변수
     - 같은 클래스 내 모든 객체가 공용으로 사용.
     - 만약 private static이라면 static 멤버 **함수**로 접근 가능
-    
+
 ## 4. Inheritance
 - 파생(Derived) 클래스 객체 생성
     - 기초 클래스 생성자 호출 -> 파생 클래스 생성자 호출
 - 소멸
     - 파생 클래스 소멸자 호출 -> 기초 클래스 소멸자 호출
-    
+
 ## 5. Exception processing
 - ``throw std::out_of_range("범위초과");`` 이런 식으로 std안에 여러 종류의 예외를 가지고 있음.
 - try 문
@@ -60,6 +60,7 @@ try {
 // blarblar 부분이 throw부분. try에서 발생한 오류에 대한 정보 전달
 ```
 - 참고: [TCP School](http://www.tcpschool.com/cpp/cpp_exception_intro)
+
 ## 6. C++ Const & Volatile Qualifiers
 - Const: 이미 assign된 값을 변경할 수 없다.
 - Volatile: 언제 바뀔지 모르는 값이라 최적화하지 말라는 키워드
@@ -70,7 +71,7 @@ try {
     - 장점: 빠르고, 타입 신경 안 써도 됨
     - 단점: 단순 치환이라 오류가 많고 디버깅이 어려움. 가독성이 떨어짐.
 - ``##``: 두 개의 토큰을 하나의 토큰으로 결합해주는 preprocessor 연산자
-    - ``#define XN(n) x ## n`` 이면, XN(1) 호출 시, x ## n 이니까 즉, ``x1``이 된다. 
+    - ``#define XN(n) x ## n`` 이면, XN(1) 호출 시, x ## n 이니까 즉, ``x1``이 된다.
     - Runtime에 변수를 만들 수 있다.
 - ``#pragma once``: 헤더파일 include하는 게 중복되지 않도록 설정해주는 것.
 
@@ -95,11 +96,11 @@ try {
 ## 11. Polymorphism (다형성)
 - override, overloading
 - Override
-    - 추상화(abstraction)와 같이 가는 개념. 
-    - virtual로 선언한 걸 상속받아 여러 모양으로 정의할 수 있다. 
+    - 추상화(abstraction)와 같이 가는 개념.
+    - virtual로 선언한 걸 상속받아 여러 모양으로 정의할 수 있다.
     - ex. draw를 네모, 세모, 동그라미 그리는 걸로 상속
     - 자식이 부모 위에 ride해서 재정의해버리는 것
-    
+
 ## 12. Overloading
 - 다형성 중 하나
 - 함수 개수나 타입을 달리한 **같은 이름**의 함수를 정의하는 것. 중복 정의
