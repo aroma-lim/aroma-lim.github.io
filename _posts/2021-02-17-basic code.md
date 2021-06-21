@@ -108,6 +108,15 @@ sort(v.begin(), v.end(), less<int>());
     // 대문자일 때
     if (s[i] >= 'A' && s[i] <= 'Z')
     ```
+  - 소문자 대문자 체크 및 변환
+    ```
+    #include <cctype>
+
+    if (isupper(ch))
+      ch = tolower(ch);
+    else if (islower(ch))
+      ch = toupper(ch);
+    ```
 
 ## 진법 다루기 - 2진수 등
 ```
